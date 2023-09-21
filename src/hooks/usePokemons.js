@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 export function usePokemons() {
   const [pokemons, setPokemons] = useState([]);
   
-  useEffect( () => {
+/*   const getPokemons = useEffect( () => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0")
       .then((response) => response.json())
       .then((data) => {
@@ -17,7 +17,8 @@ export function usePokemons() {
           return 0;
         });
         setPokemons(pokemonSortedList)});
-  }, [])
+  }, []) */
 
+  
   return pokemons
 }
