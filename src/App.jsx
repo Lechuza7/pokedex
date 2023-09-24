@@ -1,13 +1,16 @@
 import { useState } from "react";
-import "./App.css";
 import { usePokemons } from "./hooks/usePokemons";
 import { useSearch } from "./hooks/useSearch";
 import { Pokemons } from "./components/Pokemons.jsx";
+import "./App.css";
+import pokedexLogo from "./assets/pokedex-logo.png"
 
 function App() {
   const [sort, setSort] = useState(false);
   const { search, updateSearch, error } = useSearch();
   const { pokemons, loading, getPokemons, sortedPokemons } = usePokemons({ search, sort });
+
+  console.log(search)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,7 +29,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>Buscador de pokemons</h1>
+        <img src= {pokedexLogo} style={{}}></img>
         <form className="form" onSubmit={handleSubmit}>
           <input
             style={{

@@ -10,6 +10,11 @@ export function useSearch() {
       return;
     }
 
+    if (search.length > 15) {
+      setError("La búsqueda no puede superar los 15 caracteres");
+      return;
+    }
+
     setError(null);
   }, [search]);
 
