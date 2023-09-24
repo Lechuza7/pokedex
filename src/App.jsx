@@ -10,8 +10,6 @@ function App() {
   const { search, updateSearch, error } = useSearch();
   const { pokemons, loading, getPokemons, sortedPokemons } = usePokemons({ search, sort });
 
-  console.log(search)
-
   const handleSubmit = (event) => {
     event.preventDefault();
     getPokemons({ search });
@@ -39,7 +37,7 @@ function App() {
             onChange={handleChange}
             value={search}
             name="search"
-            placeholder="Ditto, Farfetch'd, Articuno..."
+            placeholder="Buscar por nombre"
           />
           <input type="checkbox" onChange={handleSort} checked={sort} />
           <button type="submit">Buscar</button>
