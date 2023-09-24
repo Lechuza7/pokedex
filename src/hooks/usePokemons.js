@@ -37,5 +37,8 @@ export function usePokemons({ search, sort }) {
       : pokemons;
   }, [sort, pokemons]);  
 
+  console.log(pokemons)
+  console.log(sortedPokemons)
+
   return { pokemons, sortedPokemons, loading, getPokemons, error };
 }

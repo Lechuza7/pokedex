@@ -7,7 +7,7 @@ import { Pokemons } from "./components/Pokemons.jsx";
 function App() {
   const [sort, setSort] = useState(false);
   const { search, updateSearch, error } = useSearch();
-  const { pokemons, loading, getPokemons } = usePokemons({ search, sort });
+  const { pokemons, loading, getPokemons, sortedPokemons } = usePokemons({ search, sort });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -44,7 +44,7 @@ function App() {
         {error && <p style={{ color: "red" }}>{error}</p>}
       </header>
 
-      <main>{loading? <p>Cargando...</p> : <Pokemons pokemons={pokemons} />}</main>
+      <main>{loading? <p>Cargando...</p> : <Pokemons pokemons={sortedPokemons? sortedPokemons : pokemons} />}</main>
     </div>
   );
 }

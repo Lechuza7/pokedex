@@ -14,7 +14,7 @@ function PokemonsList({ pokemons }) {
     ));
   };
 
-  return <ul>{renderPokemons()}</ul>;
+  return <div><ul className="poke-container">{renderPokemons()}</ul></div>;
 }
 
 function NoPokemonsResult() {
@@ -23,6 +23,7 @@ function NoPokemonsResult() {
 
 export function Pokemons({ pokemons }) {
   const hasPokemons = pokemons?.length > 0;
+
   return hasPokemons ? <PokemonsList pokemons={pokemons} /> : <NoPokemonsResult />;
 }
 
