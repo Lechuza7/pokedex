@@ -1,4 +1,4 @@
-Sencilla aplicación que simula una Pokedex básica. Entre sus caracterísiticas y funcionalidades se encuentran:
+Sencilla aplicación (en construcción!) que simula una Pokedex básica. Entre sus caracterísiticas y funcionalidades se encuentran:
 
 1- Fetch de datos a la API, encapsulado en un service para usar en otro componentes de la app.
 2- usePokemons: custom hook para crear y gestionar el estado de los datos almacenados en un array de pokemons.
