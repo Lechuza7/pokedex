@@ -1,7 +1,7 @@
 export const searchPokemons = async ({ search }) => {
   try {
     const response = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0"
+      "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0"
     );
     const json = await response.json();
     const pokemons = json.results;
@@ -18,7 +18,7 @@ export const searchPokemons = async ({ search }) => {
           sprite2: pokemonData.sprites.back_default,
           baseExperience: pokemonData.base_experience,
           id: pokemonData.id,
-          height: pokemonData.height
+          type: pokemonData.types[0].type.name
         };
       })
     );
