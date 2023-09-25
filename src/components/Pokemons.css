@@ -1,0 +1,18 @@
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.poke-card {
+  border: 1px black solid;
+  width: 150px;
+  height: 200px;
+}
+
+.h6 {
+  
+}
